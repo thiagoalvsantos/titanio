@@ -45,6 +45,15 @@
 
 				
 					
+				<g:if test="${projetoInstance?.id}">
+				<p>
+					<label id="id-label" class="label"><g:message code="projeto.id.label" default="Id" /></label>
+					
+						<span class="property-value" aria-labelledby="id-label"><g:fieldValue bean="${projetoInstance}" field="id"/></span>
+					
+				</p>
+				</g:if>
+			
 				<g:if test="${projetoInstance?.nome}">
 				<p>
 					<label id="nome-label" class="label"><g:message code="projeto.nome.label" default="Nome" /></label>
@@ -63,20 +72,20 @@
 				</p>
 				</g:if>
 			
-				<g:if test="${projetoInstance?.ativo}">
-				<p>
-					<label id="ativo-label" class="label"><g:message code="projeto.ativo.label" default="Ativo" /></label>
-					
-						<span class="property-value" aria-labelledby="ativo-label"><g:formatBoolean boolean="${projetoInstance?.ativo}" /></span>
-					
-				</p>
-				</g:if>
-			
 				<g:if test="${projetoInstance?.dataInicio}">
 				<p>
 					<label id="dataInicio-label" class="label"><g:message code="projeto.dataInicio.label" default="Data Inicio" /></label>
 					
 						<span class="property-value" aria-labelledby="dataInicio-label"><g:formatDate date="${projetoInstance?.dataInicio}" /></span>
+					
+				</p>
+				</g:if>
+			
+				<g:if test="${projetoInstance?.ativo}">
+				<p>
+					<label id="ativo-label" class="label"><g:message code="projeto.ativo.label" default="Ativo" /></label>
+					
+						<span class="property-value" aria-labelledby="ativo-label"><g:formatBoolean boolean="${projetoInstance?.ativo}" /></span>
 					
 				</p>
 				</g:if>

@@ -24,6 +24,7 @@
 	<ul class="container_12">
 		<li class="home current"><a href="#" title="Home">Home</a>
 			<ul>
+				<li><a class="home" href="${createLink(uri: '/')}">Inicio</a></li>
 				<li><g:link title="Projetos" controller="projeto">Projetos</g:link>
 				</li>
 				<li><a href="#" title="My profile">My profile</a></li>
@@ -92,7 +93,8 @@
 				<li><a href="#" title="Add user">Add user</a></li>
 				<li><a href="#" title="Settings">Settings</a></li>
 			</ul></li>
-		<li class="stats"><a href="#" title="Stats">Stats</a></li>
+		<li class="stats"><g:link controller="resumo" title="Resumo">Resumo</g:link>
+		</li>
 		<li class="settings"><a href="#" title="Settings">Settings</a></li>
 		<li class="backup"><a href="#" title="Backup">Backup</a></li>
 	</ul>

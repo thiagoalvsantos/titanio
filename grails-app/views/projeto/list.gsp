@@ -42,6 +42,13 @@
 					<thead>
 						<tr>
 							
+						<th  scope="col"  title="${message(code: 'projeto.id.label', default: 'Id')}">
+							<span class="column-sort">
+								<a href="#" title="Sort up" class="sort-up"></a>
+								<a href="#" title="Sort down" class="sort-down"></a>
+							</span><g:message code="projeto.id.label" default="Id" />
+						</th>
+					
 						<th  scope="col"  title="${message(code: 'projeto.nome.label', default: 'Nome')}">
 							<span class="column-sort">
 								<a href="#" title="Sort up" class="sort-up"></a>
@@ -56,18 +63,18 @@
 							</span><g:message code="projeto.descricao.label" default="Descricao" />
 						</th>
 					
-						<th  scope="col"  title="${message(code: 'projeto.ativo.label', default: 'Ativo')}">
-							<span class="column-sort">
-								<a href="#" title="Sort up" class="sort-up"></a>
-								<a href="#" title="Sort down" class="sort-down"></a>
-							</span><g:message code="projeto.ativo.label" default="Ativo" />
-						</th>
-					
 						<th  scope="col"  title="${message(code: 'projeto.dataInicio.label', default: 'Data Inicio')}">
 							<span class="column-sort">
 								<a href="#" title="Sort up" class="sort-up"></a>
 								<a href="#" title="Sort down" class="sort-down"></a>
 							</span><g:message code="projeto.dataInicio.label" default="Data Inicio" />
+						</th>
+					
+						<th  scope="col"  title="${message(code: 'projeto.ativo.label', default: 'Ativo')}">
+							<span class="column-sort">
+								<a href="#" title="Sort up" class="sort-up"></a>
+								<a href="#" title="Sort down" class="sort-down"></a>
+							</span><g:message code="projeto.ativo.label" default="Ativo" />
 						</th>
 					
 						</tr>
@@ -79,13 +86,15 @@
 							<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
 								
-						<td><g:link action="show" id="${projetoInstance.id}">${fieldValue(bean: projetoInstance, field: "nome")}</g:link></td>
+						<td><g:link action="show" id="${projetoInstance.id}">${fieldValue(bean: projetoInstance, field: "id")}</g:link></td>
+					
+						<td>${fieldValue(bean: projetoInstance, field: "nome")}</td>
 					
 						<td>${fieldValue(bean: projetoInstance, field: "descricao")}</td>
 					
-						<td><g:formatBoolean boolean="${projetoInstance.ativo}" /></td>
-					
 						<td><g:formatDate date="${projetoInstance.dataInicio}" /></td>
+					
+						<td><g:formatBoolean boolean="${projetoInstance.ativo}" /></td>
 					
 							</tr>
 						</g:each>

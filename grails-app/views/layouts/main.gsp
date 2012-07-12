@@ -52,7 +52,11 @@
 <g:javascript src="libs/modernizr.custom.min.js" />
 
 <g:layoutHead />
-<r:layoutResources />
+
+
+
+
+
 </head>
 
 <body>
@@ -91,6 +95,8 @@
 	<g:javascript src="libs/jquery.dataTables.min.js" />
 	<g:javascript src="libs/jquery.datepick/jquery.datepick.min.js" />
 
+	<r:layoutResources />
+	<crumbs:resources />
 
 	<!-- Charts library -->
 	<!--Load the AJAX API-->
@@ -283,7 +289,6 @@
 															 * We set specific options for each columns here. Some columns contain raw data to enable correct sorting, so we convert it for display
 															 * @url http://www.datatables.net/usage/columns
 															 */
-															
 
 															/*
 															 * Set DOM structure for table controls
