@@ -5,10 +5,13 @@
 html {
 	min-height: 100%;
 	overflow-x: hidden;
+	background: url(../images/bg.texture.leather.png) repeat;
+	background: url(../images/bg.texture.wooden.dark.jpg) repeat;
+	min-height: 100%;
 }
 body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	background: url(../images/bg.png) no-repeat center top;
+	/*background: url(../images/bg.png) no-repeat center top;*/
 	min-height: 100%;
 }
 textarea, input, button {
@@ -204,7 +207,8 @@ nav {
 	-o-background-size: 100% 100%;
 	background-size: 100% 100%;
 	background: -moz-linear-gradient(top, #014a7d, #3399cc);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#014a7d), to(#3399cc));
+	/*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#014a7d), to(#3399cc));*/
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#014a7d), to(#014a7d));
 	-moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
 	box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
@@ -236,8 +240,8 @@ nav {
 				-o-transition: opacity 2s;
 				transition: opacity 2s;
 			}
-			nav > ul > li.home, nav > ul > li.home > a { background-image: url(../images/icons/home_2states.png); }
-			nav > ul > li.write, nav > ul > li.write > a { background-image: url(../images/icons/write_2states.png); }
+			nav > ul > li.home, nav > ul > li.home > a { background-image: url(../images/icones/home-icone.png); }
+			nav > ul > li.projeto, nav > ul > li.projeto > a { background-image: url(../images/icones/projetos-icone.png); }
 			nav > ul > li.comments, nav > ul > li.comments > a { background-image: url(../images/icons/comments_2states.png); }
 			nav > ul > li.medias, nav > ul > li.medias > a { background-image: url(../images/icons/medias_2states.png); }
 			nav > ul > li.users, nav > ul > li.users > a { background-image: url(../images/icons/users_2states.png); }

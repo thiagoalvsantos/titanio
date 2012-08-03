@@ -5,33 +5,34 @@
 <meta name="layout" content="main">
 <g:set var="entityName"
 	value="${message(code: 'projeto.label', default: 'Projeto')}" />
-<title><g:message code="default.create.label"
-		args="[entityName]" /></title>
+<title><g:message code="projeto.novo.label" default="Novo Projeto" /> </title>
 </head>
 
 <body>
 
-
 	<section class="grid_12">
-		<div class="block-border">
-			<g:form action="save" class="block-content form"
-				>
+			<div class="block-content no-padding">
 				<h1>
-					<g:message code="default.create.label" args="[entityName]" />
+					<g:message code="projeto.novo.label" default="Novo Projeto" />
 				</h1>
-
 				<div class="block-controls">
 
 					<ul class="controls-tabs">
-						<li><a class="home" href="${createLink(uri: '/')}"
-							title="${message(code:'default.home.label')}"><g:img
-									file="icones/home.png" width="24" height="24" /></a></li>
+						
 						<li><g:link class="list" action="list" title="Lista">
-								<g:img file="icones/database.png" width="24" height="24" />
-							</g:link></li>
+							<g:img file="icones/database.png" width="24" height="24" />
+						</g:link></li>
 					</ul>
 
 				</div>
+
+			</div>
+	</section>
+
+	<section class="grid_12">
+			<g:form action="save" class="block-content form"
+				>
+
 
 				<g:if test="${flash.message}">
 					<ul class="message warning no-margin">
@@ -60,7 +61,6 @@
 				</fieldset>
 
 			</g:form>
-		</div>
 	</section>
 </body>
 </html>

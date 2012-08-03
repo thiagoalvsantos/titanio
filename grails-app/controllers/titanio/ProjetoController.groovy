@@ -1,7 +1,11 @@
 package titanio
 
+import grails.plugins.springsecurity.Secured
+
 import org.springframework.dao.DataIntegrityViolationException
 
+
+@Secured(['ROLE_ADMINISTRADOR'])
 class ProjetoController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -19,12 +23,16 @@ class ProjetoController {
 
     def create() {
         [projetoInstance: new Projeto(params)]
+		[termoAberturaProjetoInstance: new TermoAberturaProjeto(params)]
     }
 
     def save() {
         def projetoInstance = new Projeto(params)
-        if (!projetoInstance.save(flush: true)) {
-            render(view: "create", model: [projetoInstance: projetoInstance])
+		def termoAberturaProjetoInstance = new TermoAberturaProjeto(params)
+		termoAberturaProjetoInstance.projeto = projetoInstance
+		
+        if (!projetoInstance.save(flush: true) && !termoAberturaProjetoInstance.save(flush: true) ) {
+            render(view: "create", model: [projetoInstance: projetoInstance, termoAberturaProjetoInstance:TermoAberturaProjeto])
             return
         }
 
@@ -34,6 +42,7 @@ class ProjetoController {
 
     def show() {
         def projetoInstance = Projeto.get(params.id)
+	
         if (!projetoInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'projeto.label', default: 'Projeto'), params.id])
             redirect(action: "list")
@@ -45,6 +54,7 @@ class ProjetoController {
 
     def edit() {
         def projetoInstance = Projeto.get(params.id)
+		def termoAberturaProjetoInstance = TermoAberturaProjeto.findByProjeto = projetoInstance
         if (!projetoInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'projeto.label', default: 'Projeto'), params.id])
             redirect(action: "list")

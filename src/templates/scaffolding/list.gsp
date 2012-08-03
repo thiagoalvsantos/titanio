@@ -11,9 +11,7 @@
 </head>
 <body>
 
-	<g:if test="\${flash.message}">
-		<div class="message">\${flash.message}</div>
-	</g:if>
+
 	<section class="grid_12">
 		<div class="block-border">
 			<div class="block-content no-padding">
@@ -32,6 +30,10 @@
 			</div>
 		</div>
 	</section>
+
+	<g:if test="\${flash.message}">
+		<div class="message">\${flash.message}</div>
+	</g:if>
 
 	<section class="grid_12">
 		<div class="block-border">

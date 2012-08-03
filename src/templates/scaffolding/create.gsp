@@ -11,15 +11,12 @@
 
 <body>
 
-
 	<section class="grid_12">
 		<div class="block-border">
-			<g:form action="save" class="block-content form"
-				<%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+			<div class="block-content no-padding">
 				<h1>
 					<g:message code="default.create.label" args="[entityName]" />
 				</h1>
-
 				<div class="block-controls">
 
 					<ul class="controls-tabs">
@@ -32,6 +29,16 @@
 					</ul>
 
 				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="grid_12">
+		<div class="block-border">
+			<g:form action="save" class="block-content form"
+				<%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+
 
 				<g:if test="\${flash.message}">
 					<ul class="message warning no-margin">

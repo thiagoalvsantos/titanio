@@ -10,9 +10,15 @@ class Projeto {
 	Date dataInicio
 	boolean ativo
 
+
 	static constraints = {
 		nome blank: false, minSize:2 , maxSize:50
 		descricao blank: false, widget: 'textarea', minSize:5, maxSize: 500
-		dataInicio blank:false
+		dataInicio nullable:true
+	}
+
+	@Override
+	public String toString() {
+		return nome
 	}
 }

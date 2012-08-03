@@ -1,7 +1,8 @@
 package titanio
 
-import titanio.Projeto
+import grails.plugins.springsecurity.Secured
 
+@Secured(['ROLE_ADMINISTRADOR'])
 class ResumoController {
 
 

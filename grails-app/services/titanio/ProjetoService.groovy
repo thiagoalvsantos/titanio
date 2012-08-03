@@ -2,8 +2,7 @@ package titanio
 
 class ProjetoService {
 
-	def listar() {
+    def serviceMethod() {
 
-		return Projeto.listOrderByNome()
-	}
+    }
 }

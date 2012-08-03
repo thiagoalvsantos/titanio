@@ -249,7 +249,7 @@ p.inline-medium-label,.inline-medium-label p {
 }
 
 /** IE class **/
-.form input[type=text],.form input[type=password],.form .input-type-text
+.form input[type=text],.form input[type=password],.form input[type=email],.form .input-type-text
 	{
 	font-size: 1em;
 	line-height: 1em;
@@ -268,11 +268,11 @@ p.inline-medium-label,.inline-medium-label p {
 	border-radius: 0.417em;
 }
 
-.form input[type=text],.form input[type=password] {
+.form input[type=text],.form input[type=password],.form input[type=email] {
 	padding-bottom: 0.583em;
 }
 
-.form input[type=text]:focus,.form input[type=password]:focus,.form .input-type-text:focus,.form select:focus,.form textarea:focus
+.form input[type=text]:focus,.form input[type=password]:focus,.form .input-type-text:focus,.form select:focus,.form textarea:focus,.form input[type=email]:focus
 	{
 	border-color: #3399cc;
 }
@@ -289,7 +289,7 @@ p.inline-medium-label,.inline-medium-label p {
 	display: inline-block;
 }
 
-.form .input-type-text input[type=text],.form .input-type-text input[type=password]
+.form .input-type-text input[type=text],.form .input-type-text input[type=password], .form .input-type-text input[type=email]
 	{
 	padding: 0;
 	border: none;
@@ -339,7 +339,7 @@ p.inline-medium-label,.inline-medium-label p {
 	border: 1px solid #adcede;
 }
 
-.form input[type=text].small,.form input[type=password].small,.form select.small,.form textarea.small
+.form input[type=text].small,.form input[type=password].small,.form input[type=email].small, .form select.small,.form textarea.small
 	{
 	font-size: 1em;
 	padding: 0.167em;
@@ -349,11 +349,11 @@ p.inline-medium-label,.inline-medium-label p {
 	border-radius: 0.25em;
 }
 
-.form input[type=text].small,.form input[type=password].small {
+.form input[type=text].small,.form input[type=password].small,.form input[type=email].small {
 	padding: 0.25em;
 }
 
-.form input[type=text].smaller,.form input[type=password].smaller,.form select.smaller,.form textarea.smaller
+.form input[type=text].smaller,.form input[type=password].smaller,.form select.smaller,.form textarea.smaller,.form input[type=email].smaller
 	{
 	font-size: 1em;
 	padding: 0;
@@ -363,12 +363,12 @@ p.inline-medium-label,.inline-medium-label p {
 	border-radius: 0;
 }
 
-.form input[type=text].big,.form input[type=password].big,.form select.big,.form textarea.big
+.form input[type=text].big,.form input[type=password].big,.form select.big,.form textarea.big,.form input[type=email].big
 	{
 	font-size: 1.5em;
 }
 
-.form input[type=text].bigger,.form input[type=password].bigger,.form select.bigger,.form textarea.bigger
+.form input[type=text].bigger,.form input[type=password].bigger,.form select.bigger,.form textarea.bigger,.form input[type=email].bigger
 	{
 	font-size: 2.5em;
 }
@@ -511,7 +511,7 @@ p.input-height,p.input-height.grey-bg {
 	margin: 0.2em 0 0 0;
 }
 
-.form input[type=text].error,.form input[type=password].error,.form .input-type-text.error,.form select.error
+.form input[type=text].error,.form input[type=password].error,.form .input-type-text.error,.form select.error, .form input[type=email].error
 	{
 	border-color: #CC0000;
 }

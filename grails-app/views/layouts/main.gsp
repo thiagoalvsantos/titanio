@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title><g:layoutTitle default="Titanio" /></title>
+<title>Titânio :: <g:layoutTitle /></title>
 <meta name="description" content="Titanio Agile">
 <meta name="author" content="Thiago Alves">
 
@@ -96,7 +96,6 @@
 	<g:javascript src="libs/jquery.datepick/jquery.datepick.min.js" />
 
 	<r:layoutResources />
-	<crumbs:resources />
 
 	<!-- Charts library -->
 	<!--Load the AJAX API-->

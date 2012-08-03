@@ -36,7 +36,7 @@ grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
 
 
 // The default codec used to encode data with ${}
-grails.views.default.codec = "none" // none, html, base64
+grails.views.default.codec = "html" // none, html, base64
 grails.views.gsp.encoding = "UTF-8"
 grails.converters.encoding = "UTF-8"
 // enable Sitemesh preprocessing of GSP pages
@@ -93,6 +93,6 @@ log4j = {
 }
 
 // Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'titanio.SecUser'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'titanio.SecUserSecRole'
-grails.plugins.springsecurity.authority.className = 'titanio.SecRole'
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'titanio.Usuario'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'titanio.UsuarioPerfil'
+grails.plugins.springsecurity.authority.className = 'titanio.Perfil'
