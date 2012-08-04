@@ -51,18 +51,10 @@ grails.project.dependency.resolution = {
 }
 
 codenarc.reports = {
-	// Each report definition is of the form:
-	//    REPORT-NAME(REPORT-TYPE) {
-	//        PROPERTY-NAME = PROPERTY-VALUE
-	//        PROPERTY-NAME = PROPERTY-VALUE
-	//    }
 
-	MyXmlReport('xml') {                    // The report name "MyXmlReport" is user-defined; Report type is 'xml'
-		outputFile = 'target/test-reports/CodeNarcReport.xml'  // Set the 'outputFile' property of the (XML) Report
-		title = 'Titanio - Codenarc'             // Set the 'title' property of the (XML) Report
-	}
-	MyHtmlReport('html') {                  // Report type is 'html'
-		outputFile = 'target/test-reports/CodeNarcReport.html'
+	MyXmlReport('xml') {
+		outputFile = 'target/test-reports/CodeNarcReport.xml'
 		title = 'Titanio - Codenarc'
 	}
+
 }
