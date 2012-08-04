@@ -97,7 +97,4 @@ grails.plugins.springsecurity.userLookup.userDomainClassName = 'titanio.Usuario'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'titanio.UsuarioPerfil'
 grails.plugins.springsecurity.authority.className = 'titanio.Perfil'
 
-codenarc {
-	reportName = 'target/test-reports/CodeNarcReport.xml'
-	reportType = 'xml'
-   }
+
